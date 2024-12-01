@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be Mine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #yes {
+      background-color: #28a745;
+      color: white;
+    }
+    #no {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will You Be Mine Forever? 💖</h1>
+  <button id="yes" onclick="alert('Yay! I knew it ❤️')">Yes</button>
+  <button id="no">No</button>
+
+  <script>
+    const noButton = document.getElementById('no');
+
+    noButton.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+      noButton.style.left = `${x}px`;
+      noButton.style.top = `${y}px`;
+    });
+  </script>
+</body>
+</html>
